@@ -26,5 +26,14 @@
           = link_to "Login", '#'
         %li
           = link_to "Register", '#'
+
+          .form-wrapper
+  = simple_form_for @post, html: { class: 'form-horizontal', multipart: true } do |f|
+    .form-group
+      = f.input :image
+    .form-group.text-center
+      = f.input :caption
+    .form-group.text-center
+      = f.button :submit, class: 'btn-success'
   </body>
 </html>
