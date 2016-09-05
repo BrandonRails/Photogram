@@ -1,9 +1,4 @@
-= simple_form_for @post do |f| 
-  = f.input :image 
-
-  = f.input :caption
-
-  = f.button :submit 
+= render 'form'
 
   .text-center.edit-links
   = link_to "Delete Post", post_path(@post), method: :delete, data: {confirm: "Are you sure you want to delete this post?" }
